@@ -1,7 +1,3 @@
-require 'priority_queue'
-
-$pq = PriorityQueue.new
-
 class Messenger
   def initialize(session)
     @session = session
@@ -45,7 +41,6 @@ class Messenger
       kind: 'Human Services',
       page: 1,
       per_page: 5)
-    pq.push @locations 
   end
 
   def search_term

@@ -1,5 +1,5 @@
 class ConversationTracker
-  def initialize(body, session)
+  def initialize(body, session, pq)
     @body = body
     @session = session
     restart if @body =~ /\Areset\z/i
