@@ -21,7 +21,7 @@
 
 en:
   intro: >
-    Hi! Please enter a 5-digit ZIP code to get started.
+    HOWDY THERE! Please enter a 5-digit ZIP code to get started.
   choose_category: 'Please enter a search term, or choose one by entering its number: %{list}'
   results_intro: >
     Here are up to 5 locations that match your search.
