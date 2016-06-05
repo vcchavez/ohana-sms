@@ -334,6 +334,7 @@ class LocationsControllerTest < ActionController::TestCase
       get_reply_with_body('2')
       get_reply_with_body('0')
       get_reply_with_body('3')
+      #puts("ASKS FOR RATING #{sms_body}")
       assert_match("Thanks!", sms_body)
     end
   end
@@ -343,13 +344,14 @@ class LocationsControllerTest < ActionController::TestCase
       get_reply_with_body('hi')
       get_reply_with_body('94025')
       get_reply_with_body('1')
-      get_reply_with_body('1')
+      get_reply_with_body('4')
       get_reply_with_body('0')
       get_reply_with_body('3')
       get_reply_with_body('reset')
       get_reply_with_body('hi')
       get_reply_with_body('94025')
       get_reply_with_body('1')
+      #puts("FIRST RATING #{sms_body}")
       assert_match("3 Stars", sms_body)
     end
   end
@@ -373,6 +375,7 @@ class LocationsControllerTest < ActionController::TestCase
       get_reply_with_body('hi')
       get_reply_with_body('94025')
       get_reply_with_body('1')
+      #puts("UPDAE RATING #{sms_body}")
       assert_match("4 Stars", sms_body)
     end
   end
@@ -389,6 +392,7 @@ class LocationsControllerTest < ActionController::TestCase
       get_reply_with_body('hi')
       get_reply_with_body('94025')
       get_reply_with_body('1')
+      #puts("CORRECT INDEXING #{sms_body}")
       assert_match("5 Stars", sms_body)
     end
   end

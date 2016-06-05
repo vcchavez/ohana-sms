@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.smc-connect.org/search?keyword=Care&kind=Human%20Services&location=94025&page=1&per_page=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.ohanapi-v1+json
+      User-Agent:
+      - Ohanakapa Ruby Gem 1.1.2
+      If-None-Match:
+      - '"05ba2154eb65d549c51f58925829f6a2"'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 304
+      message: Not Modified
+    headers:
+      Server:
+      - Cowboy
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - '"05ba2154eb65d549c51f58925829f6a2"'
+      Date:
+      - Sun, 05 Jun 2016 17:29:28 GMT
+      Cache-Control:
+      - max-age=300, public
+      Vary:
+      - Origin
+      X-Request-Id:
+      - 3e921115-9ffd-452e-a8c3-0fdd5d881a6c
+      X-Runtime:
+      - '0.043555'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sun, 05 Jun 2016 17:29:29 GMT
+recorded_with: VCR 3.0.1

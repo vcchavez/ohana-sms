@@ -1,0 +1,139 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.smc-connect.org/search?keyword=Care&kind=Human%20Services&location=94025&page=1&per_page=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.ohanapi-v1+json
+      User-Agent:
+      - Ohanakapa Ruby Gem 1.1.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - '"05ba2154eb65d549c51f58925829f6a2"'
+      Link:
+      - <https://api.smc-connect.org/search?keyword=Care&kind=Human+Services&location=94025&page=18&per_page=5>;
+        rel="last", <https://api.smc-connect.org/search?keyword=Care&kind=Human+Services&location=94025&page=2&per_page=5>;
+        rel="next"
+      X-Total-Count:
+      - '88'
+      Date:
+      - Sun, 05 Jun 2016 01:47:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - max-age=300, public
+      Vary:
+      - Origin
+      X-Request-Id:
+      - 54e926d7-de35-4aac-88c5-c21608cca026
+      X-Runtime:
+      - '0.108205'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"id":1713,"active":true,"admin_emails":[],"alternate_name":"","coordinates":[-122.2141324,37.4773738],"description":"This
+        regional HSA office offers social services eligibility determination and assistance
+        for: Health Coverage (Medi-Cal), Food Assistance (CalFresh), Financial Assistance
+        (CalWORKs) and General Assistance, and Children and Family Services and Employment
+        Services. This location also offers a Job Information Center to help clients
+        find jobs and with employment services.","kind":"Human Services","latitude":37.4773738,"longitude":-122.2141324,"name":"Southern
+        Region., Human Services Agency, Redwood City Office","short_desc":"Provides
+        social services eligibility determination and assistance for Health Coverage,
+        CalFresh, CalWORKs and General Assistance, Children and Family Services, and
+        Employment Services","slug":"southern-region-human-services-agency-redwood-city-office","updated_at":"2015-11-16T13:26:55.695-08:00","url":"https://api.smc-connect.org/locations/southern-region-human-services-agency-redwood-city-office","address":{"id":1436,"address_1":"2500
+        Middlefield Rd.","address_2":null,"city":"Redwood City","state_province":"CA","postal_code":"94063"},"organization":{"id":1310,"accreditations":[],"alternate_name":null,"date_incorporated":null,"description":null,"email":null,"funding_sources":[],"licenses":[],"name":"San
+        Mateo County Human Services Agency","website":null,"slug":"san-mateo-county-human-services-agency","url":"https://api.smc-connect.org/organizations/san-mateo-county-human-services-agency","locations_url":"https://api.smc-connect.org/organizations/san-mateo-county-human-services-agency/locations"},"phones":[{"id":2470,"department":"Main
+        Number","extension":null,"number":"650-599-3811","number_type":"voice","vanity_number":null},{"id":2471,"department":"Children
+        and Family Services","extension":null,"number":"650-802-7922","number_type":"voice","vanity_number":null},{"id":3572,"department":"Economic
+        Self Sufficiency","extension":null,"number":"650 364-5684","number_type":"fax","vanity_number":null},{"id":3626,"department":"Economic
+        Self Sufficiency","extension":null,"number":"800-223-8383","number_type":"voice","vanity_number":null}]},{"id":1496,"active":true,"admin_emails":[],"alternate_name":"","coordinates":[-122.1402122,37.4723535],"description":"This
+        regional HSA office offers social services eligibility determination and assistance
+        for: Health Coverage (Medi-Cal), Food Assistance (CalFresh), Financial Assistance
+        (CalWORKs) and General Assistance, and Children and Family Services. Child
+        welfare services such as family maintenance, family reunification and long-term
+        placement programs are available at this office.","kind":"Human Services","latitude":37.4723535,"longitude":-122.1402122,"name":"Southern
+        Region., Human Services Agency, East Palo Alto Office","short_desc":"Provides
+        social services eligibility determination and assistance for Health Coverage,
+        CalFresh, CalWORKs and General Assistance and Children and Family Services.","slug":"southern-region-human-services-agency-east-palo-alto-office","updated_at":"2015-11-16T13:25:29.258-08:00","url":"https://api.smc-connect.org/locations/southern-region-human-services-agency-east-palo-alto-office","address":{"id":1235,"address_1":"2415
+        University Avenue, 3rd Floor","address_2":null,"city":"East Palo Alto","state_province":"CA","postal_code":"94303"},"organization":{"id":1310,"accreditations":[],"alternate_name":null,"date_incorporated":null,"description":null,"email":null,"funding_sources":[],"licenses":[],"name":"San
+        Mateo County Human Services Agency","website":null,"slug":"san-mateo-county-human-services-agency","url":"https://api.smc-connect.org/organizations/san-mateo-county-human-services-agency","locations_url":"https://api.smc-connect.org/organizations/san-mateo-county-human-services-agency/locations"},"phones":[{"id":2090,"department":null,"extension":null,"number":"650
+        363-4218","number_type":"voice","vanity_number":null},{"id":3441,"department":null,"extension":null,"number":"650
+        325-5327","number_type":"fax","vanity_number":null}]},{"id":1289,"active":true,"admin_emails":[],"alternate_name":null,"coordinates":[-122.165895,37.476018],"description":"Provides
+        academic, life skills and physical education programs and activities for boys
+        and girls age 6-18. Homework assistance and tutoring are available. Program
+        professionals can also refer youth to medical, educational and other community
+        professionals. The facility is located at 401 Pierce Road, Menlo Park, and
+        was formerly known as the Herbert Hoover Branch.","kind":"Human Services","latitude":37.476018,"longitude":-122.165895,"name":"McNeil
+        Family Clubhouse","short_desc":"Provides academic, life skills and physical
+        education programs and activities for children and teens age 6-18.","slug":"mcneil-family-clubhouse","updated_at":"2014-12-04T11:17:21.319-08:00","url":"https://api.smc-connect.org/locations/mcneil-family-clubhouse","address":{"id":1031,"address_1":"401
+        Pierce Road","address_2":null,"city":"Menlo Park","state_province":"CA","postal_code":"94025"},"organization":{"id":1272,"accreditations":[],"alternate_name":null,"date_incorporated":null,"description":null,"email":null,"funding_sources":[],"licenses":[],"name":"Boys
+        and Girls Club of the Peninsula","website":null,"slug":"boys-and-girls-club-of-the-peninsula","url":"https://api.smc-connect.org/organizations/boys-and-girls-club-of-the-peninsula","locations_url":"https://api.smc-connect.org/organizations/boys-and-girls-club-of-the-peninsula/locations"},"phones":[{"id":1703,"department":null,"extension":null,"number":"650
+        646-6070","number_type":"voice","vanity_number":null},{"id":3295,"department":null,"extension":null,"number":"650
+        322-6251","number_type":"fax","vanity_number":null}]},{"id":114,"active":true,"admin_emails":[],"alternate_name":null,"coordinates":[-122.1121089,37.421782],"description":"A
+        year-round mental health treatment and special education program for children
+        and adolescents with emotional, behavioral, developmental or learning disabilities
+        who are age 5 to 22. Offers short- or long-term services depending on need.
+        Works with the family and school toward the child''s gradual transition to
+        a less restrictive environment and to adult service systems. Services include
+        a non-public school individual, group and family therapy. Also offers speech
+        and language therapy, art therapy, special education, sensory motor training
+        and vocational training. Community Integration includes community-based instruction,
+        supported-work training and mainstreaming with age-appropriate peers. Parent
+        education and behavioral management are provided through individual and group
+        counseling. An additional site is located at 1212 McGinness Avenue, San Jose.","kind":"Human
+        Services","latitude":37.421782,"longitude":-122.1121089,"name":"ACHIEVEKIDS","short_desc":"A
+        year-round day treatment and special education program for children and adolescents
+        with emotional, behavioral, developmental or learning disabilities.","slug":"achievekids","updated_at":"2014-12-04T11:10:51.025-08:00","url":"https://api.smc-connect.org/locations/achievekids","address":{"id":108,"address_1":"3860
+        Middlefield Road","address_2":null,"city":"Palo Alto","state_province":"CA","postal_code":"94303-4716"},"organization":{"id":114,"accreditations":[],"alternate_name":null,"date_incorporated":null,"description":null,"email":null,"funding_sources":[],"licenses":[],"name":"ACHIEVEKIDS","website":null,"slug":"achievekids","url":"https://api.smc-connect.org/organizations/achievekids","locations_url":"https://api.smc-connect.org/organizations/achievekids/locations"},"phones":[{"id":149,"department":null,"extension":null,"number":"650
+        494-1200","number_type":"voice","vanity_number":null},{"id":2569,"department":null,"extension":null,"number":"650
+        494-1243","number_type":"fax","vanity_number":null}]},{"id":1377,"active":true,"admin_emails":[],"alternate_name":null,"coordinates":[-122.1805905,37.4480204],"description":"A
+        multipurpose center offering a wide variety of recreational, education and
+        cultural activities. Lifelong learning courses cover topics such as music,
+        art, languages, etc., are hosted at this location. Little House offers a large
+        variety of classes including arts and crafts, jewelry, languages, current
+        events, lapidary, woodwork, painting, and fitness courses (yoga, strength
+        straining, tai chi). There are monthly art and cultural lectures, movie showings,
+        and a computer center. Recreation activities include mah jong, pinochle, ballroom
+        dancing, bridge, trips and tours. Partners with the Sequoia Adult Education
+        Program. The Alzheimer''s Cafe, open the third Tuesday of every month from
+        2:00 - 4:00 pm, is a place that brings together people liviing with dementia,
+        their families, and their caregivers. Free and no registration is needed.
+        The Little House Community Service Desk offers information and referrals regarding
+        social service issues, such as housing, food, transportation, health insurance
+        counseling, and estate planning. Massage, podiatry, and acupuncture are available
+        by appointment. Lunch is served Monday-Friday, 11:30 am-1:00 pm. Prices vary
+        according to selection.","kind":"Human Services","latitude":37.4480204,"longitude":-122.1805905,"name":"Little
+        House","short_desc":"A multipurpose senior citizens'' center.","slug":"little-house","updated_at":"2014-12-04T11:08:55.571-08:00","url":"https://api.smc-connect.org/locations/little-house","address":{"id":1117,"address_1":"800
+        Middle Avenue","address_2":null,"city":"Menlo Park","state_province":"CA","postal_code":"94025-9881"},"organization":{"id":1298,"accreditations":[],"alternate_name":null,"date_incorporated":null,"description":null,"email":null,"funding_sources":[],"licenses":[],"name":"Peninsula
+        Volunteers","website":null,"slug":"peninsula-volunteers","url":"https://api.smc-connect.org/organizations/peninsula-volunteers","locations_url":"https://api.smc-connect.org/organizations/peninsula-volunteers/locations"},"phones":[{"id":1887,"department":null,"extension":null,"number":"650
+        326-2025","number_type":"voice","vanity_number":null},{"id":1888,"department":"Peninsula
+        Volunteers","extension":null,"number":"650 326-0665","number_type":"voice","vanity_number":null},{"id":3352,"department":null,"extension":null,"number":"650
+        326-9547","number_type":"fax","vanity_number":null}]}]'
+    http_version: 
+  recorded_at: Sun, 05 Jun 2016 01:47:20 GMT
+recorded_with: VCR 3.0.1

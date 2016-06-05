@@ -5,5 +5,5 @@ set -e
 echo '====Running tests===='
 bin/rake test
 
-echo "\n====Running Rubocop===="
-rubocop -R
+#echo "\n====Running Rubocop===="
+#rubocop -R
