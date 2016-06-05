@@ -8,7 +8,6 @@ gem 'puma'
 gem 'twilio-ruby'
 gem 'ohanakapa', '~> 1.1.1'
 gem 'faraday-http-cache', '~> 1.0'
-gem 'PriorityQueue'
 
 group :production do
   gem 'dalli'
