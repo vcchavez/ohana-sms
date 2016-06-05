@@ -32,7 +32,7 @@ ratings.
 ### An Aside
 Neither of the collaborators knew Rails coming into this project so this was both quite
 the challenge and learning experience. This project was inspired by 
-[Code for America]'s (https://www.codeforamerica.org) Ready to Work en Español [Challenge]
+[Code for America's] (https://www.codeforamerica.org) Ready to Work en Español [Challenge]
 (https://cache.codeforamerica.org/events/national-day-2016/challenge-ready-to-work-en-espanol
 challenge).
 
