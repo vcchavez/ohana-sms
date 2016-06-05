@@ -83,9 +83,9 @@ class ConversationTracker
   end
 
   def fifth_step_message(map)
-    enable_third_step
     if @body =~ /\A[1-5]\z/ 
       rate_location(map)
+      enable_third_step
       return "Thanks! #{I18n.t('choose_location')}"
     else
       return enable_fourth_step
@@ -99,7 +99,7 @@ class ConversationTracker
   end
 
   def first_step?
-    @session[:counter] == 0 || (!second_step? && !third_step?)
+    @session[:counter] == 0 || (!second_step? && !third_step? && !fourth_step? && !fifth_step?)
   end
 
   def second_step?
