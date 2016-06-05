@@ -326,14 +326,70 @@ class LocationsControllerTest < ActionController::TestCase
     assert_response :unauthorized
   end
 
-  test 'tracks convo' do
+  test 'asks for rating' do
     VCR.use_cassette('94025_hi', allow_playback_repeats: true) do
       get_reply_with_body('hi')
       get_reply_with_body('94025')
       get_reply_with_body('1')
+      get_reply_with_body('2')
       get_reply_with_body('0')
       get_reply_with_body('3')
       assert_match("Thanks!", sms_body)
+    end
+  end
+
+  test 'get first rating' do
+    VCR.use_cassette('94025_rate', allow_playback_repeats: true) do
+      get_reply_with_body('hi')
+      get_reply_with_body('94025')
+      get_reply_with_body('1')
+      get_reply_with_body('1')
+      get_reply_with_body('0')
+      get_reply_with_body('3')
+      get_reply_with_body('reset')
+      get_reply_with_body('hi')
+      get_reply_with_body('94025')
+      get_reply_with_body('1')
+      assert_match("3 Stars", sms_body)
+    end
+  end
+
+  test 'update rating' do
+    VCR.use_cassette('94025_rate_update', allow_playback_repeats: true) do
+      get_reply_with_body('hi')
+      get_reply_with_body('94025')
+      get_reply_with_body('1')
+      get_reply_with_body('1')
+      get_reply_with_body('0')
+      get_reply_with_body('3')
+      get_reply_with_body('reset')
+      get_reply_with_body('hi')
+      get_reply_with_body('94025')
+      get_reply_with_body('1')
+      get_reply_with_body('1')
+      get_reply_with_body('0')
+      get_reply_with_body('5')
+      get_reply_with_body('reset')
+      get_reply_with_body('hi')
+      get_reply_with_body('94025')
+      get_reply_with_body('1')
+      assert_match("4 Stars", sms_body)
+    end
+  end
+
+  test 'correct index rating' do
+    VCR.use_cassette('94025_rate_index', allow_playback_repeats: true) do
+      get_reply_with_body('hi')
+      get_reply_with_body('94025')
+      get_reply_with_body('1')
+      get_reply_with_body('3')
+      get_reply_with_body('0')
+      get_reply_with_body('5')
+      get_reply_with_body('reset')
+      get_reply_with_body('hi')
+      get_reply_with_body('94025')
+      get_reply_with_body('1')
+      assert_match("5 Stars", sms_body)
     end
   end
 

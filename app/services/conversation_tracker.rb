@@ -93,10 +93,10 @@ class ConversationTracker
   end
 
   def rate_location(map)
-    loc = Messenger.new(@session).locations[@session[:location].to_i - 1].name
+    loc = Messenger.new(@session).location.name
     curr_rate = map[loc][0]
     num_raters = map[loc][1] + 1
-    map.store(loc, [curr_rate+Integer(@body)/num_raters, num_raters])
+    map.store(loc, [(curr_rate+Integer(@body))/num_raters, num_raters])
   end
 
   def first_step?
