@@ -1,6 +1,6 @@
 # Ohana SMS
 
-This project is the product of a 1.5 day hackathon-- SF State's Day of Civic Hacking 2016.
+This project is the product of a 1.5 day hackathon-- [SF State's Day of Civic Hacking 2016] (http://hackathon.sfsu.edu/home).
 
 "Ohana SMS is a Ruby on Rails application that allows people in need who lack
 access to the internet to find human services via SMS."
@@ -21,13 +21,13 @@ see the updated ratings whenever they're viewing the locations available.
 ### Features We'd Like to Add
 Besides providing a quantitative rating, we'd like users to be able to provide qualitative
 feedback about their experience. After giving a numerical rating, we'd like to prompt the 
-user for any additional comments about they're experience. All feedback is always anonymous,
+user for any additional comments about their experience. All feedback is always anonymous,
 since we're not storing the user's data. 
 
 Furthermore, what's the point of feedback if it never reaches the correct people? 
 We'd like to add a script that biweekly or monthly gathers all the new comments for 
 all locations, and then emails the respective location a compilation of comments and 
-ratings. 
+ratings they've received. 
 
 ### An Aside
 Neither of the collaborators knew Rails coming into this project so this was both quite
