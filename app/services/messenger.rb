@@ -63,7 +63,7 @@ class Messenger
   end
 
   def rating_for(location, map)
-    if (map[location.name][1] == 0)
+    if (map[location.name][1] == 0) && (map[location.name][0] == 0)
       " (No Ratings)"
     else
       num = map[location.name][0]
