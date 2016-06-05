@@ -67,7 +67,7 @@ class Messenger
       " (No Ratings)"
     else
       num = map[location.name][0]
-      " (##{num} Stars)"
+      " (#{num} Stars)"
     end
   end
 
