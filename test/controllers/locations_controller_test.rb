@@ -326,6 +326,17 @@ class LocationsControllerTest < ActionController::TestCase
     assert_response :unauthorized
   end
 
+  test 'tracks convo' do
+    VCR.use_cassette('94025_hi', allow_playback_repeats: true) do
+      get_reply_with_body('hi')
+      get_reply_with_body('94025')
+      get_reply_with_body('1')
+      get_reply_with_body('0')
+      get_reply_with_body('3')
+      assert_match("Thanks!", sms_body)
+    end
+  end
+
   private
 
   def get_reply_with_body(body, locale = 'en')
