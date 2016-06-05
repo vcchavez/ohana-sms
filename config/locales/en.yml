@@ -33,6 +33,12 @@ en:
   no_results_found: >
     Sorry, no results found. Please try again with a different search term or
     ZIP code.
+  to_rate: >
+    If you visited this location and would like to rate it/provide feedback, reply 0.
+  give_rating: >
+    Please rate how helpful this location was on a scale of 1 to 5 (1 = terrible, 5 = excellent)
+  give_feedback: >
+    Are there any comments you'd like to give about this location?
   phone: Phone
   address: Address
   categories:

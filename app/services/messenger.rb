@@ -55,7 +55,7 @@ class Messenger
   end
 
   def location_details
-    "#{name_and_short_desc} | #{phone} | #{address}"
+    "#{name_and_short_desc} | #{phone} | #{address}. #{I18n.t('to_rate')}"
   end
 
   def name_and_short_desc
