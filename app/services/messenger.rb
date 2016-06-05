@@ -3,17 +3,17 @@ class Messenger
     @session = session
   end
 
-  def search_results
-    locations_list_prefix + locations_list
+  def search_results(map)
+    locations_list_prefix + locations_list(map)
   end
 
   def locations_list_prefix
     I18n.t('results_intro')
   end
 
-  def locations_list
+  def locations_list(map)
     locations.map.with_index do |location, i|
-      "##{i + 1}: #{location.name}#{org_name_for(location)}"
+      "##{i + 1}: #{location.name}#{rating_for(location,map)}"
     end.join(', ')
   end
 
@@ -62,9 +62,13 @@ class Messenger
     "#{location.name}: #{location.short_desc}"
   end
 
-  def org_name_for(location)
-    return if location.name == location.organization.name
-    " (#{location.organization.name})"
+  def rating_for(location, map)
+    if (map[location.name][1] == 0)
+      "No Ratings"
+    else
+      num = map[location.name][0]
+      "##{num} Stars"
+    end
   end
 
   def phone

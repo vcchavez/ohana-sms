@@ -28,11 +28,11 @@ class ConversationTracker
     Messenger.new(nil).categories
   end
 
-  def second_step_message
+  def second_step_message(map)
     @session[:cats] = @body
     return apologize_and_restart if no_results?
     enable_third_step
-    Messenger.new(@session).search_results
+    Messenger.new(@session).search_results(map)
   end
 
   def no_results?
@@ -93,9 +93,10 @@ class ConversationTracker
   end
 
   def rate_location(map)
-    curr_rate = map[@session[:location]][0]
-    num_raters = map[@session[:location]][1] + 1
-    map[@session[:location]] = [curr_rate+Integer(@body)/num_raters, num_raters]
+    loc = @session[:location].name
+    curr_rate = map[loc][0]
+    num_raters = map[loc][1] + 1
+    map[loc] = [curr_rate+Integer(@body)/num_raters, num_raters]
   end
 
   def first_step?
@@ -120,7 +121,7 @@ class ConversationTracker
 
   def message(map)
     return first_step_message if first_step?
-    return second_step_message if second_step?
+    return second_step_message(map) if second_step?
     return third_step_message if third_step?
     return fourth_step_message if fourth_step?
     return fifth_step_message(map) if fifth_step?
