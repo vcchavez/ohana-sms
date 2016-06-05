@@ -46,12 +46,14 @@ class ConversationTracker
 
   def enable_third_step
     @session[:step_2] = false
+    @session[:step_5] = false
     @session[:step_3] = true
   end
 
   def third_step_message
     return process_location_details if @body =~ /\A[1-5]\z/
     if @body =~ /\A[0]\z/ 
+      enable_fourth_step
       return fourth_step_message
     elsif @body =~ /ty\z|thanks!?\z|thank you!*\z/i
       return "#{I18n.t('you_are_welcome')} #{I18n.t('choose_location')}"
@@ -71,7 +73,7 @@ class ConversationTracker
   end
 
   def fourth_step_message
-    enable_fourth_step
+    enable_fifth_step
     return "#{I18n.t('give_rating')}"
   end
 
@@ -81,7 +83,7 @@ class ConversationTracker
   end
 
   def fifth_step_message(map)
-    enable_fifth_step
+    enable_third_step
     if @body =~ /\A[1-5]\z/ 
       rate_location(map)
       return "Thanks! #{I18n.t('choose_location')}"
