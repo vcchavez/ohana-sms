@@ -1,5 +1,3 @@
-require 'priority_queue'
-
 class LocationsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
@@ -13,7 +11,7 @@ class LocationsController < ApplicationController
     session[:counter] ||= 0
 
     twiml = Twilio::TwiML::Response.new do |r|
-      r.Message ConversationTracker.new(params[:Body], session).message(hm)
+      r.Message ConversationTracker.new(params[:Body], session).message(@@hm)
     end
 
     session[:counter] += 1
