@@ -64,10 +64,10 @@ class Messenger
 
   def rating_for(location, map)
     if (map[location.name][1] == 0)
-      "No Ratings"
+      " (No Ratings)"
     else
       num = map[location.name][0]
-      "##{num} Stars"
+      " (##{num} Stars)"
     end
   end
 
